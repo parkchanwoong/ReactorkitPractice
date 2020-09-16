@@ -17,6 +17,7 @@ class ViewController: UIViewController, StoryboardView {
     @IBOutlet weak var minusButton: UIButton!
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +31,13 @@ class ViewController: UIViewController, StoryboardView {
         // Action
 
         minusButton.rx.tap
+            .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
             .map{ Reactor.Action.decrease}
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
 
         plusButton.rx.tap
+            .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
             .map { Reactor.Action.increase}
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
@@ -42,7 +45,14 @@ class ViewController: UIViewController, StoryboardView {
         // State
         reactor.state
             .map {"\($0.value)"}
+            .distinctUntilChanged()
             .bind(to: countLabel.rx.text)
+            .disposed(by: disposeBag)
+
+        reactor.state
+            .map {$0.isLoading}
+            .distinctUntilChanged()
+            .bind(to: indicatorView.rx.isAnimating)
             .disposed(by: disposeBag)
 
     }

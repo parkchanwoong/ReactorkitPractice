@@ -31,6 +31,9 @@
                                 </constraints>
                                 <state key="normal" title="-"/>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="MdD-k6-1T7">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
+                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BK7-hJ-2vB">
                                 <rect key="frame" x="192" y="438" width="30" height="30"/>
                                 <constraints>
@@ -47,14 +50,17 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qec-OO-wKi" secondAttribute="trailing" constant="53" id="6Gd-1I-hSP"/>
                             <constraint firstItem="BK7-hJ-2vB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Ga4-xu-oLR"/>
                             <constraint firstItem="Den-jA-R4c" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="eds-La-jS2"/>
+                            <constraint firstItem="MdD-k6-1T7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fav-H0-wZg"/>
                             <constraint firstItem="BK7-hJ-2vB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hHK-iy-qsJ"/>
                             <constraint firstItem="Qec-OO-wKi" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="lvj-Ou-EKd"/>
                             <constraint firstItem="Den-jA-R4c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="qiD-2m-Uql"/>
+                            <constraint firstItem="MdD-k6-1T7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="yPO-kf-oUJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="countLabel" destination="BK7-hJ-2vB" id="AgY-FS-owv"/>
+                        <outlet property="indicatorView" destination="MdD-k6-1T7" id="nVt-op-UWx"/>
                         <outlet property="minusButton" destination="Den-jA-R4c" id="VKY-Q0-FVU"/>
                         <outlet property="plusButton" destination="Qec-OO-wKi" id="Azy-Yg-rEO"/>
                     </connections>
