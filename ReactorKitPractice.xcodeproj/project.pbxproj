@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23BD81CB54B107A69855841F /* Pods_ReactorKitPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF771C015219D4454B7A31B /* Pods_ReactorKitPractice.framework */; };
 		F4F326F02511AFC200E9125E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F326EF2511AFC200E9125E /* AppDelegate.swift */; };
 		F4F326F22511AFC200E9125E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F326F12511AFC200E9125E /* SceneDelegate.swift */; };
 		F4F326F42511AFC200E9125E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F326F32511AFC200E9125E /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A00F2CFC37E48CD2385DA438 /* Pods-ReactorKitPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactorKitPractice.debug.xcconfig"; path = "Target Support Files/Pods-ReactorKitPractice/Pods-ReactorKitPractice.debug.xcconfig"; sourceTree = "<group>"; };
+		D091CCB1D5132DABF9BA1BA8 /* Pods-ReactorKitPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactorKitPractice.release.xcconfig"; path = "Target Support Files/Pods-ReactorKitPractice/Pods-ReactorKitPractice.release.xcconfig"; sourceTree = "<group>"; };
 		F4F326EC2511AFC200E9125E /* ReactorKitPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactorKitPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F326EF2511AFC200E9125E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4F326F12511AFC200E9125E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		F4F326F82511AFC400E9125E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4F326FB2511AFC400E9125E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4F326FD2511AFC400E9125E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCF771C015219D4454B7A31B /* Pods_ReactorKitPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactorKitPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23BD81CB54B107A69855841F /* Pods_ReactorKitPractice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		765470EA365977C483DBD2E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A00F2CFC37E48CD2385DA438 /* Pods-ReactorKitPractice.debug.xcconfig */,
+				D091CCB1D5132DABF9BA1BA8 /* Pods-ReactorKitPractice.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E31B90C2CE974EC7130DA734 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCF771C015219D4454B7A31B /* Pods_ReactorKitPractice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F4F326E32511AFC200E9125E = {
 			isa = PBXGroup;
 			children = (
 				F4F326EE2511AFC200E9125E /* ReactorKitPractice */,
 				F4F326ED2511AFC200E9125E /* Products */,
+				765470EA365977C483DBD2E2 /* Pods */,
+				E31B90C2CE974EC7130DA734 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4F327002511AFC400E9125E /* Build configuration list for PBXNativeTarget "ReactorKitPractice" */;
 			buildPhases = (
+				F7BAC43BFD06CB5B5DFC4D3E /* [CP] Check Pods Manifest.lock */,
 				F4F326E82511AFC200E9125E /* Sources */,
 				F4F326E92511AFC200E9125E /* Frameworks */,
 				F4F326EA2511AFC200E9125E /* Resources */,
+				9B2434FF55292D86A7B3EF97 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B2434FF55292D86A7B3EF97 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReactorKitPractice/Pods-ReactorKitPractice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReactorKitPractice/Pods-ReactorKitPractice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactorKitPractice/Pods-ReactorKitPractice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7BAC43BFD06CB5B5DFC4D3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReactorKitPractice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4F326E82511AFC200E9125E /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		F4F327012511AFC400E9125E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A00F2CFC37E48CD2385DA438 /* Pods-ReactorKitPractice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		F4F327022511AFC400E9125E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D091CCB1D5132DABF9BA1BA8 /* Pods-ReactorKitPractice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
